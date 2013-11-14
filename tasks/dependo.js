@@ -20,7 +20,9 @@ module.exports = function(grunt) {
     // Paths
     var targetPath = grunt.file.isPathAbsolute(config.targetPath) ? config.targetPath : path.resolve(config.targetPath);
     var baseOutputPath = grunt.file.isPathAbsolute(config.outputPath) ? config.outputPath : path.resolve(config.outputPath);
-    var outputPath = path.join(baseOutputPath, 'index.html');
+    var outputFilename = config.outputFilename || 'index.html';
+    var outputPath = path.join(baseOutputPath, outputFilename);
+
 
     // Fire up an dependo instance
     var dependo = new Dependo(targetPath, {
