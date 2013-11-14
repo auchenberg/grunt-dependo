@@ -5,9 +5,9 @@
   "repository": "https://github.com/auchenberg/grunt-dependo.git",
   "homepage": "https://github.com/auchenberg/grunt-dependo.git",
   "licenses": [
-  {
-    "type": "MIT"
-  }
+    {
+      "type": "MIT"
+    }
   ],
   "description": "Visualize your CommonJS or AMD module dependencies.",
   "keywords": [
@@ -32,7 +32,7 @@
     "dependo": "~0.1.0"
   },
   "devDependencies": {
-    "grunt": "~0.4.0"
+    "grunt": "~0.4.1",
+    "dependo": "~0.1.1"
   }
 }
-
