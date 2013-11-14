@@ -28,8 +28,6 @@ module.exports = function (grunt) {
         var baseOutputPath = grunt.file.isPathAbsolute(options.outputPath) ? options.outputPath : path.resolve(options.outputPath);
         var outputPath = path.join(baseOutputPath, options.fileName);
 
-        grunt.log.writeln('exclude ' + options.fileName);
-
         // Fire up an dependo instance
         var dependo = new Dependo(targetPath, {
             format: options.format,
