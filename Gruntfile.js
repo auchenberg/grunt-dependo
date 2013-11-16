@@ -1,16 +1,22 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
-  grunt.initConfig({
+    grunt.initConfig({
 
-    dependo: {
-      targetPath: '/Users/auchenberg/Development/example-multipage/www',
-      outputPath: './example',
-      format: 'amd'
-    }
+        dependo: {
+            main: {
+                fileName: 'main.html'
+            },
+            options: {
+                targetPath: '/Users/auchenberg/Development/example-multipage/www',
+                outputPath: './',
+                fileName : 'dependencies.html',
+                format: 'amd'
+            }
+        }
 
-  });
+    });
 
-  grunt.loadTasks('tasks');
+    grunt.loadTasks('tasks');
 
 
 };
