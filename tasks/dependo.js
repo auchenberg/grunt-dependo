@@ -16,7 +16,7 @@ module.exports = function (grunt) {
         var Dependo = require("dependo");
         var path = require('path');
         var options = this.options({
-            baseOutputPath: './',
+            outputPath: './',
             fileName: 'index.html',
             format: 'amd',
             targetPath: './',
