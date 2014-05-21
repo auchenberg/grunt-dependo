@@ -29,10 +29,7 @@ module.exports = function (grunt) {
         var outputPath = path.join(baseOutputPath, options.fileName);
 
         // Fire up an dependo instance
-        var dependo = new Dependo(targetPath, {
-            format: options.format,
-            exclude: options.exclude
-        });
+        var dependo = new Dependo(targetPath, options);
 
         // Write HTML
         var html = dependo.generateHtml();
