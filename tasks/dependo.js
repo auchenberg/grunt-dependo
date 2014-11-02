@@ -24,7 +24,14 @@ module.exports = function (grunt) {
         });
 
         // Paths
-        var targetPath = grunt.file.isPathAbsolute(options.targetPath) ? options.targetPath : path.resolve(options.targetPath);
+        vat targetPath;
+        if (options.targetPath instanceof Array) {
+          targetPath = options.targetPath.map(function(target) {
+            return grunt.file.isPathAbsolute(target) ? target : path.resolve(target);
+          });
+        } else {
+          targetPath = grunt.file.isPathAbsolute(options.targetPath) ? options.targetPath : path.resolve(options.targetPath);
+        }
         var baseOutputPath = grunt.file.isPathAbsolute(options.outputPath) ? options.outputPath : path.resolve(options.outputPath);
         var outputPath = path.join(baseOutputPath, options.fileName);
 
