@@ -24,7 +24,7 @@ module.exports = function (grunt) {
         });
 
         // Paths
-        vat targetPath;
+        var targetPath;
         if (options.targetPath instanceof Array) {
           targetPath = options.targetPath.map(function(target) {
             return grunt.file.isPathAbsolute(target) ? target : path.resolve(target);
